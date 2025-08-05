@@ -8,7 +8,6 @@
 </head>
 <body>
     <!-- Play Music Button -->
-<button id="playMusicBtn">Play Soundtrack</button>
 <audio id="bgm" loop>
     <source src="thunderjaw/soundtrack.mp3" type="audio/mpeg">
 </audio>
@@ -84,7 +83,7 @@
         </div>
     </section>
 
-    <script>
+   <script>
     function initAudioPlayOnce() {
         var bgm = document.getElementById('bgm');
         if (bgm.paused) {
@@ -95,9 +94,9 @@
     document.addEventListener('click', initAudioPlayOnce);
 </script>
 
-
 </body>
 </html>
+
 
 
 
