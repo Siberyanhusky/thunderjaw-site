@@ -85,15 +85,20 @@
     </section>
 
     <script>
-    document.getElementById('playMusicBtn').addEventListener('click', function() {
+    function initAudioPlayOnce() {
         var bgm = document.getElementById('bgm');
-        bgm.play();
-        this.style.display = 'none'; // Hilangin button setelah dipencet
-    });
+        if (bgm.paused) {
+            bgm.play();
+            document.removeEventListener('click', initAudioPlayOnce);
+        }
+    }
+    document.addEventListener('click', initAudioPlayOnce);
 </script>
+
 
 </body>
 </html>
+
 
 
 
