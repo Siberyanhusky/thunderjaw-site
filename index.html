@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background Music -->
-    <audio autoplay loop hidden>
-        <source src="thunderjaw/soundtrack.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Play Music Button -->
+<button id="playMusicBtn">Play Soundtrack</button>
+<audio id="bgm" loop>
+    <source src="thunderjaw/soundtrack.mp3" type="audio/mpeg">
+</audio>
+
 
     <!-- Header Video Section -->
     <header>
@@ -81,7 +83,17 @@
             <img src="thunderjaw/dokumentasi3.jpeg" alt="Dokumentasi 3">
         </div>
     </section>
+
+    <script>
+    document.getElementById('playMusicBtn').addEventListener('click', function() {
+        var bgm = document.getElementById('bgm');
+        bgm.play();
+        this.style.display = 'none'; // Hilangin button setelah dipencet
+    });
+</script>
+
 </body>
 </html>
+
 
 
